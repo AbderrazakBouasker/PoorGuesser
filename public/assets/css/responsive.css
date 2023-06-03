@@ -1,0 +1,707 @@
+@media (min-width: 1919px) {
+.intro-content {
+    margin-top: -200px;
+}
+	
+	
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1269px) {	  
+    
+.intro-content {
+    margin-top: -100px;
+}
+.layer-1 h2 {
+    font-size: 34px;
+    line-height: 42px;
+}
+.layer-2 p {
+    font-size: 15px;
+}
+.header-area-2 .header-right-link, .header-right-link {
+    margin-left: 10px;
+    width: 120px;
+}    
+.main-menu ul.navbar-nav li a {
+    font-size: 15px;
+    padding: 40px 12px;
+}
+.slide-all-text {
+    margin-top: 50px;
+}
+.header-area.stick .main-menu ul.navbar-nav li a {
+    padding: 30px 12px;
+}    
+.achive-number {
+    font-size: 34px;
+    line-height: 44px;
+}    
+.support-services {
+    padding: 30px 10px 20px 20px;
+}    
+.overview-text {
+    margin-top: 0px;
+}    
+.blog-content {
+    padding: 30px 15px;
+}    
+.inner-payment {
+    padding: 80px 15px;
+}    
+.footer-list li a {
+    font-size: 15px;
+} 
+.single-games h4 {
+    font-size: 20px;
+}    
+.chips-number {
+    font-size: 20px;
+    line-height: 28px;
+}
+.chips-image img {
+    width: 90px;
+    height: 90px;
+}   
+.intro-area-2 .layer-1 h2 {
+    font-size: 44px;
+    max-width: 560px;
+    line-height: 54px;
+}
+.intro-area-3 .layer-1 h2 {
+    font-size: 44px;
+    max-width: 570px;
+    line-height: 54px;
+}   
+.achivement-area-2 .achivement-content {
+    margin-top: 70px;
+}
+.intro-area-3 .slide-all-text {
+    margin-top: 30px;
+} 
+.single-member .team-img {
+    width: 140px;
+    height: 140px;
+}
+.right-side {
+    padding-left: 15px;
+}   
+    
+    
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.logo a {
+    padding: 15px 0;
+}
+.header-right-link {
+    width: 85px;
+    margin-left: 10px;
+    padding: 25px 0px;
+}
+.header-area.stick .header-right-link{
+    padding: 26px 0px;
+}
+.layer-1 h2 {
+    font-size: 31px;
+    line-height: 40px;
+    max-width: 460px;
+    margin-bottom: 10px;
+}
+.layer-2 p {
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 400px;
+    margin-bottom: 0px;
+}
+.intro-content {
+    margin-top: -70px;
+}
+.slide-all-text {
+    margin-top: 40px;
+}
+.intro-area-2 .slide-top-image {
+    left: 40%;
+    top: -30%;
+}
+.main-menu ul.navbar-nav li a, 
+.header-area.stick .main-menu ul.navbar-nav li a {
+    font-size: 13px;
+    padding: 30px 7px;
+}
+.main-menu ul.nav li .mega-menu {
+    width: 720px;
+    left: -54%;
+}
+.main-menu > ul.navbar-nav >li >a::before,
+.header-area.stick .main-menu > ul.navbar-nav >li >a::before {
+    left: 9px;
+    bottom: 25px;
+}      
+.footer1 .suscribe-input button{
+    font-size: 14px;
+    padding: 10px 5px;
+    width: 46%;
+}    
+.footer1 .suscribe-input input {
+    width: 54%;
+} 
+.footer-list {
+    width: 100%;
+    float: none;
+}
+.footer-list li a {
+    font-size: 15px;
+}    
+.topbar-left ul li a {
+    margin-right: 10px;
+}    
+.s-menu {
+    padding: 10px 8px;
+    font-size: 13px;
+}
+.ready-btn {
+    font-size: 16px;
+    padding: 8px 14px;
+}       
+.achive-number {
+    font-size: 24px;
+    line-height: 40px;
+}    
+.achivement-text h6 {
+    font-size: 12px;
+    padding-left: 14px;
+}    
+.single-achive {
+    padding: 30px 10px;
+}    
+.more-text {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}    
+.deposite-content th {
+    padding: 8px 10px 8px 15px;
+}    
+.deposite-content td {
+    padding: 8px 10px 8px 15px;
+}    
+.deposite-content td {
+    font-size: 15px;
+}   
+.proses-text h4 {
+    font-size: 19px;
+}
+.overview-text {
+    margin-top: 0px;
+}
+.overview-text h3 {
+    font-size: 28px;
+    line-height: 36px;
+}    
+.overview-text ul li a {
+    font-size: 14px;
+}    
+.header-area.stick .logo a {
+    padding: 15px 0;
+}    
+.support-all {
+    margin-left: 40px;
+    margin-right: 40px;
+}    
+.inner-payment {
+    padding: 80px 10px;
+}    
+.single-card {
+    padding: 15px 5px;
+}
+.tab-menu ul.nav li a {
+    padding: 16px 10px 16px;
+}    
+.cha-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 10px;
+}    
+.cha-img {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+}   
+.tab-inner .single-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}    
+.play-btn {
+    bottom: -60px;
+}    
+.about-content {
+    margin-top: 0px;
+}    
+.intro-area-2 .layer-1 h2 {
+    font-size: 36px;
+    max-width: 425px;
+    line-height: 50px;
+}    
+.intro-area-2 .layer-2 p {
+    font-size: 16px;
+    max-width: 420px;
+}
+.intro-area-2 .slide-all-text {
+    margin-top: 20px;
+}
+.support-services .support-content h4 {
+    font-size: 20px;
+}    
+.intro-area-3 .layer-1 h2 {
+    font-size: 36px;
+    max-width: 500px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}    
+.achivement-area-2 .achivement-content {
+    margin-top: 90px;
+}    
+.intro-area-3 .ready-btn {
+    margin-top: 0px;
+}    
+.about-video {
+    margin-bottom: 30px;
+}
+.game-about {
+    padding: 30px 10px;
+}
+.game-text h4 {
+    font-size: 18px;
+}
+.ticket-name {
+    font-size: 17px;
+}    
+.ticket-rate {
+    top: 0px;
+}
+.single-ticket {
+    padding: 40px 20px 30px;
+}
+.lottery-top h4 {
+    font-size: 18px;
+}    
+.lottery-top .ticket-rate {
+    top: -30px;
+}    
+.self-ticket span {
+    float: none;
+    margin-bottom: 10px;
+    display: block;
+}    
+.business-faq h3 {
+    font-size: 22px;
+    line-height: 30px;
+}    
+.breadcrumb h2 {
+    font-size: 36px;
+    line-height: 44px;
+}    
+.top-price-inner h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}    
+.base {
+    position: absolute;
+    right: -60px;
+    top: 17px;
+}    
+.top-price-inner {
+    padding: 40px 30px 20px;
+}
+.top-price-inner::after {
+    border-left: 105px solid transparent;
+    border-right: 105px solid transparent;
+}    
+.sign-icon ul li {
+    margin: 0px 0px;
+}    
+.login-form {
+    margin: 0px;
+}    
+.right-side {
+    padding-left: 0px;
+}    
+.blog-search-option input {
+    width: 75%;
+}    
+.post-img {
+    display: none;
+}    
+.pst-content {
+    padding-left: 0px;
+}
+.contact-icon {
+    margin-bottom: 60px;
+    padding: 40px 10px;
+}    
+.single-icon p {
+    font-size: 15px;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {width:300px}
+.logo {
+    height: inherit;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    z-index: 999999;
+    max-width: 130px;
+}
+.logo a,
+.header-two .logo a{
+    padding: 0px;
+}
+.intro-bg{
+	display: none;
+}
+.intro-area{
+    float: none;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+}
+.bg-wrapper,
+.bg-wrapper img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+}
+.intro-content {
+    margin-top: -120px;
+}
+.layer-1 h2, .intro-area-2 .layer-1 h2 {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 15px;
+}
+.layer-2 p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}   
+.footer-area {
+    padding: 120px 0px 100px;
+}    
+.suscribe-input {
+    width: 100%;
+}       
+.slide-all-text {
+    margin-top: 70px;
+}
+.support-all {
+    margin-left: 0px;
+    margin-top: 40px;
+}
+.topbar-right {
+    float: none;
+}   
+.topbar-left ul li a {
+    margin-right: 5px;
+    padding: 11px 0 0px;
+    font-size: 14px;
+}    
+.topbar-right>ul>li>a {
+    color: #c2d4f8;
+    display: block;
+    padding: 10px 30px 10px 0px;
+    position: relative;
+}       
+.achive-number {
+    font-size: 34px;
+    line-height: 44px;
+}
+.support-images {
+    width: 70px;
+    height: 70px;
+}
+.support-content {
+    padding-left: 80px;
+}
+.support-services .support-content h4 {
+    font-size: 21px;
+}
+.about-content {
+    margin-top: 0px;
+}
+.support-services {
+    padding: 30px 10px 30px 15px;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.tab-menu {
+    margin-bottom: 20px;
+}
+.tab-menu ul.nav li {
+    float: none;
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 20px;
+}
+.tab-menu ul.nav li a {
+    padding: 16px 15px 16px;
+}
+.tab-inner .single-page {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.play-btn {
+    bottom: -60px;
+}
+.cha-title {
+    font-size: 18px;
+}
+.section-headline h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.diposite-box,
+.deposite-content {
+    max-width: 100%;
+    overflow-x: auto;
+}    
+.deposite-table {
+    min-width: 1000px;
+}    
+.deposite-content tr:nth-child(even){
+    width: 1000px; 
+}    
+.overview-text h3 {
+    font-size: 25px;
+    line-height: 36px;
+}    
+.blog-content {
+    padding: 20px 20px;
+}    
+.blog-meta span {
+    padding-right: 5px;
+    font-size: 13px;
+}    
+.blog-content a h4 {
+    font-size: 19px;
+}    
+.payment-area{
+    margin-top: 0px;
+}    
+.inner-payment {
+    padding: 80px 0px;
+    top: 0px;
+}    
+.single-card {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+}    
+.footer-content {
+    margin-bottom: 40px;
+}
+.last-content{
+    margin-bottom: 0px;
+}
+.intro-area-2{
+    background: #171627;
+}    
+.intro-area-2 .slide-all-text {
+    margin-top: 50px;
+}    
+.about-area-2 .support-services {
+    margin-top: 0px;
+}    
+.single-how.first-item, .single-how.thired-item {
+    top: 0px;
+}    
+.single-how {
+    margin-bottom: 30px;
+}    
+.how-to-area {
+    padding: 100px 0px 70px;
+}    
+.intro-area-3 .layer-1 h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0px auto 10px;
+}    
+.achivement-area-2 .single-achive {
+    margin-bottom: 0px;
+    margin-top: 30px;
+}    
+.video-content {
+    top: 30%;
+}
+.intro-area-3 .layer-2 p {
+    font-size: 16px;
+    margin: 0px auto 10px;
+}    
+.intro-area-3 .slide-all-text {
+    margin-top: 40px;
+}   
+.chips-number {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 15px;
+}    
+.chips-image {
+    width: 30%;
+}    
+ .chips-price {
+    font-size: 14px;
+    padding: 2px 10px;
+}   
+.chips-image img {
+    width: 70px;
+    height: 70px;
+}    
+.breadcrumb h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.product-content{
+    margin-top: 40px;
+}
+.game-feature {
+    padding: 30px 15px;
+}
+.game-system-head h3 {
+    font-size: 26px;
+}    
+.game-about {
+    padding: 30px 10px;
+}    
+.game-text h4 {
+    font-size: 18px;
+    line-height: 28px;
+}    
+.page-img {
+    margin-top: 30px;
+}    
+.ticket-rate {
+    top: 0px;
+}    
+.single-ticket {
+    padding: 40px 20px;
+}    
+.lottery-top .ticket-rate {
+    top: -40px;
+}    
+.lottery-top h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.single-lottery {
+    padding: 30px 15px 40px;
+}
+.self-ticket span {
+    float: none;
+    margin-bottom: 10px;
+    display: block;
+}    
+.genreted-text {
+    font-size: 14px;
+}
+.faq-full {
+    margin-right: 0px;
+    margin-bottom: 10px;
+}       
+.all-faq-text {
+    overflow: hidden;
+    margin-bottom: 50px;
+}    
+.login-form {
+    padding: 30px 15px;
+    margin: 0px;
+}    
+.sign-icon ul li a {
+    font-size: 12px;
+    padding: 5px 7px;
+}    
+.high-text {
+    font-size: 120px;
+    line-height: 140px;
+}
+.error-bot {
+    font-size: 18px;
+}
+.right-side {
+    padding-left: 0px;
+    margin-top: 40px;
+}    
+.pst-content p a {
+    font-size: 14px;
+}    
+.related-post-list .recent-single-post {
+    width: 100%;
+    float: none;
+    padding: 0px 0px 20px;
+}
+.related-post-list .recent-single-post:last-child {
+    padding: 0px;
+}
+.comments-list-img {
+    width: 60px;
+    height: 60px;
+}    
+.comments-content-wrap {
+    margin: 0 0 5px 65px;
+}    
+.threaded-comments {
+    margin-left: 20px;
+}
+.contact-icon {
+    margin-bottom: 30px;
+}    
+.contact-images {
+    margin: 30px 0px;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+.single-icon p {
+    font-size: 14px;
+}           
+.banner-content {
+    padding: 0px 20px;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+ 
