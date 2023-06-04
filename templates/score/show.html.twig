@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Score{% endblock %}
+
+{% block body %}
+    <h1>Score</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ score.id }}</td>
+            </tr>
+            <tr>
+                <th>Score</th>
+                <td>{{ score.score }}</td>
+            </tr>
+            <tr>
+                <th>Guess_x</th>
+                <td>{{ score.guessX }}</td>
+            </tr>
+            <tr>
+                <th>Guess_y</th>
+                <td>{{ score.guessY }}</td>
+            </tr>
+            <tr>
+                <th>Real_x</th>
+                <td>{{ score.realX }}</td>
+            </tr>
+            <tr>
+                <th>Real_y</th>
+                <td>{{ score.realY }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_score_index') }}">back to list</a>
+
+    <a href="{{ path('app_score_edit', {'id': score.id}) }}">edit</a>
+
+    {{ include('score/_delete_form.html.twig') }}
+{% endblock %}

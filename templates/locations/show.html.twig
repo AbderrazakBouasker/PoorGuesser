@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Locations{% endblock %}
+
+{% block body %}
+    <h1>Locations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ location.id }}</td>
+            </tr>
+            <tr>
+                <th>Cord_x</th>
+                <td>{{ location.cordX }}</td>
+            </tr>
+            <tr>
+                <th>Cord_y</th>
+                <td>{{ location.cordY }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ location.country }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ location.city }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_locations_index') }}">back to list</a>
+
+    <a href="{{ path('app_locations_edit', {'id': location.id}) }}">edit</a>
+
+    {{ include('locations/_delete_form.html.twig') }}
+{% endblock %}
