@@ -3,36 +3,36 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Home-1 | Playdo</title>
+		<title>PoorGuesser</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- favicon -->		
-		<link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.ico') }}">
 	{% block css %}
 		<!-- all css here -->
 
 		<!-- bootstrap v3.3.6 css -->
-		<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 		<!-- owl.carousel css -->
-		<link rel="stylesheet" href="css/owl.carousel.css">
-		<link rel="stylesheet" href="css/owl.transitions.css">
+		<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}">
        <!-- Animate css -->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
         <!-- meanmenu css -->
-        <link rel="stylesheet" href="css/meanmenu.min.css">
+        <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
 		<!-- font-awesome css -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/themify-icons.css">
+		<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
 		<!-- magnific css -->
-        <link rel="stylesheet" href="css/magnific.min.css">
+        <link rel="stylesheet" href="{{ asset('css/magnific.min.css') }}">
 		<!-- style css -->
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="{{ asset('style.css') }}">
 		<!-- responsive css -->
-		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
 		<!-- modernizr css -->
-		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
         {% endblock %}
 	</head>
 		<body>
@@ -51,7 +51,7 @@
                         <div class=" col-md-8 col-sm-8 col-xs-12">
                             <div class="topbar-left">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> info@xdd.com</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> info@xddd.com</a></li>
                                     <li><a href="#"><i class="fa fa-clock-o"></i> Live support</a></li>
                                 </ul>  
                             </div>
@@ -59,15 +59,15 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="topbar-right">
 								<ul>
-                                    <li><a href="#"><img src="img/icon/w1.png" alt="">English</a>
+                                    <li><a href="#"><img src="{{ asset('img/icon/w1.png') }}" alt="">English</a>
                                        <ul>
-                                           <li><a href="#"><img src="img/icon/w2.png" alt="">Deutsch</a>
-                                           <li><a href="#"><img src="img/icon/w3.png" alt="">Español</a>
-                                           <li><a href="#"><img src="img/icon/w4.png" alt="">Français</a>
-                                           <li><a href="#"><img src="img/icon/w5.png" alt="">العربية</a>
+                                           <li><a href="#"><img src="{{ asset('img/icon/w2.png') }}" alt="">Deutsch</a>
+                                           <li><a href="#"><img src="{{ asset('img/icon/w3.png') }}" alt="">Español</a>
+                                           <li><a href="#"><img src="{{ asset('img/icon/w4.png') }}" alt="">Français</a>
+                                           <li><a href="#"><img src="{{ asset('img/icon/w5.png') }}" alt="">العربية</a>
                                        </ul>
                                     </li>
-                                    <li><a href="#"><img src="img/icon/login.png" alt="">Login</a>
+                                    <li><a href="#"><img src="{{ asset('img/icon/login.png') }}" alt="">Login</a>
                                 </ul>
 							</div>
                         </div>
@@ -84,7 +84,7 @@
                             <div class="logo">
                                 <!-- Brand -->
                                 <a class="navbar-brand " href="index.html">
-                                    <img src="img/logo/logo2.png" alt="">
+                                    <img src="{{ asset('img/logo/logo2.png') }}" alt="">
                                 </a>
                             </div>
                             <!-- logo end -->
@@ -1097,7 +1097,7 @@
                             <div class="footer-content logo-footer">
                                 <div class="footer-head">
                                     <div class="footer-logo">
-                                    	<a class="footer-black-logo" href="#"><img src="img/logo/logo2.png" alt=""></a>
+                                    	<a class="footer-black-logo" href="#"><img src="{{ asset('img/logo/logo2.png') }}" alt=""></a>
                                     </div>
                                     <p>
                                         Replacing a  maintains the amount of lines. When replacing a selection. help agencies to define their new business objectives and then create. Replacing a  maintains the amount of lines. 
@@ -1203,21 +1203,21 @@
 		<!-- jquery latest version -->
 		<script src="{{asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
 		<!-- bootstrap js -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 		<!-- owl.carousel js -->
-		<script src="js/owl.carousel.min.js"></script>
+		<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 		<!-- magnific js -->
-        <script src="js/magnific.min.js"></script>
+        <script src="{{ asset('js/magnific.min.js') }}"></script>
         <!-- wow js -->
-        <script src="js/wow.min.js"></script>
+        <script src="{{ asset('js/wow.min.js') }}"></script>
         <!-- meanmenu js -->
-        <script src="js/jquery.meanmenu.js"></script>
+        <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
 		<!-- Form validator js -->
-		<script src="js/form-validator.min.js"></script>
+		<script src="{{ asset('js/form-validator.min.js') }}"></script>
 		<!-- plugins js -->
-		<script src="js/plugins.js"></script>
+		<script src="{{ asset('js/plugins.js') }}"></script>
 		<!-- main js -->
-		<script src="js/main.js"></script>
+		<script src="{{ asset('js/main.js') }}"></script>
            {% endblock %}
 	</body>
 </html>

@@ -19,15 +19,16 @@ class Game
     #[ORM\Column(nullable: true)]
     private ?int $final_score = null;
 
-    #[ORM\ManyToOne(inversedBy: 'games')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $user_id = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $creation_date = null;
 
     #[ORM\OneToMany(mappedBy: 'game_id', targetEntity: Score::class, orphanRemoval: true)]
     private Collection $scores;
+
+    #[ORM\ManyToOne(inversedBy: 'games')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
 
     public function __construct()
     {
@@ -47,18 +48,6 @@ class Game
     public function setFinalScore(?int $final_score): self
     {
         $this->final_score = $final_score;
-
-        return $this;
-    }
-
-    public function getUserId(): ?User
-    {
-        return $this->user_id;
-    }
-
-    public function setUserId(?User $user_id): self
-    {
-        $this->user_id = $user_id;
 
         return $this;
     }
@@ -101,6 +90,18 @@ class Game
                 $score->setGameId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
