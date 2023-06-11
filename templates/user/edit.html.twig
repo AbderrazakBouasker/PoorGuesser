@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    <div class="popup-overlay-username">
+        <div class="popup-modal-username">
+            <form method="post">
+                <form method="post" action="{{ path('app_user_edit_username', {'id': user.id}) }}">
+                    <div class="">
+                        <input type="text" name="plainPassword" placeholder="Password">
+                        <input type="text" name="username" placeholder="New username">
+                        <button type="submit" id="submit" class=" login-btn">Change</button>
+                    </div>
+                </form>
+            </form>
+            <button class="btn-primary " id="close-modal-username">Close</button>
+        </div>
+    </div>
+    <div class="popup-overlay-email">
+        <div class="popup-modal-email">
+            <div>
+                <input type="text" placeholder="Password">
+                <input type="text" placeholder="New email">
+            </div>
+            <a type="submit">Change</a>
+            <button class="btn-primary" id="close-modal-email">Close</button>
+        </div>
+    </div>
+    <div class="popup-overlay-password">
+        <div class="popup-modal-password">
+            <div>
+                <input type="text" placeholder="Old password">
+                <input type="text" placeholder="New password">
+                <input type="text" placeholder="Confirm new password">
+            </div>
+            <a type="submit">Change</a>
+            <button class="btn-primary" id="close-modal-password">Close</button>
+        </div>
+    </div>
+
+    <div class="contact-area bg-color-2 area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline ">
+                        <h3>Profile Settings</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 50%;">
+                <div style="">
+                    <div class="flex-box">
+                        <div>
+                            <h5>Username: </h5> <p>{{ user.username }}</p>
+                        </div>
+                        <div class="">
+                            <button id="show-modal-username" class="overview-btn">Modify</button>
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <div>
+                            <h5>Email: </h5> <p>{{ user.email }}</p>
+                        </div>
+                        <div class="">
+                            <button id="show-modal-email" class="overview-btn">Modify</button>
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <div style="">
+                            <h5>Password: </h5>
+                            <p>Change current password</p>
+                        </div>
+                        <div class="">
+                            <button id="show-modal-password" class="overview-btn">Modify</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
