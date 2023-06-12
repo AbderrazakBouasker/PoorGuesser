@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 
 class UserType extends AbstractType
 {
@@ -18,9 +19,15 @@ class UserType extends AbstractType
             ->add('password')
             ->add('email')
 //            ->add('rank')
-            //->add('PlainPassword', PasswordType::class, [
-               // 'required' => true
-            //])
+//            ->add('PlainPassword', PasswordType::class, [
+//                'required' => true,
+//                'constraint'=>'UserPassword'
+//            ])
+//            ->add('currentPassword', PasswordType::class, [
+//                'constraints' => [
+//                    new UserPassword(),
+//                ],
+//            ])
         ;
     }
 
@@ -28,7 +35,7 @@ class UserType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-//            'data_class' => null,
+           // 'data_class' => null,
         ]);
     }
 }

@@ -6,11 +6,13 @@ use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 
 #[Route('/user')]
 class UserController extends AbstractController
@@ -54,18 +56,24 @@ class UserController extends AbstractController
     public function edit(Request $request, User $user, UserRepository $userRepository, UserPasswordHasherInterface $userPasswordHasher): Response
     {
         $form = $this->createForm(UserType::class, $user);
+        $form->add('currentPassword', PasswordType::class, [
+            'constraints' => [
+                new UserPassword(),
+            ],
+        ]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            if ($userPasswordHasher->isPasswordValid($user,$request->request->get('PlainPassword'))){
+            if (true){
                 $user->setPassword($userPasswordHasher->hashPassword($user,$form->get('password')->getData()));
                 $userRepository->save($user, true);
                 //return new JsonResponse(array("1"=>$user->getPassword(),"2"=>$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"3"=>$user->getPassword()==$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"4"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
                 //return new JsonResponse(array("plainpass"=>$request->request->get('PlainPassword'),"hashpass"=>$user->getPassword(),"comp"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
 //                return new JsonResponse(array("plain"=>$request->request->get('PlainPassword'),"comp"=>$userPasswordHasher->isPasswordValid($user,$request->request->get('PlainPassword'))));
+//                return new JsonResponse(array("pass"=>$request->request->get('plainPassword'),"username"=>$request->request->get('username')));
             }
 
 
-            return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
+//            return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('user/edit.html.twig', [
