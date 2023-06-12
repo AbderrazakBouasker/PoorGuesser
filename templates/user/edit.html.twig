@@ -3,13 +3,18 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="text" name="PlainPassword" placeholder="Password" required>
+    <button type="submit" class="btn"></button>
+    {{ form_end(form) }}
 
     <div class="popup-overlay-username">
         <div class="popup-modal-username">
             <form method="post">
                 <form method="post" action="{{ path('app_user_edit_username', {'id': user.id}) }}">
                     <div class="">
-                        <input type="text" name="plainPassword" placeholder="Password">
+{#                        <input type="text" name="plainPassword" placeholder="Password">#}
                         <input type="text" name="username" placeholder="New username">
                         <button type="submit" id="submit" class=" login-btn">Change</button>
                     </div>

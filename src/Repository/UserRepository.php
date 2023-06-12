@@ -58,17 +58,17 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->save($user, true);
     }
 
-    public function updateUsername(User $entity,User $newuser){
-        $queryBuilder = $this->getEntityManager()->createQueryBuilder();
-        $queryBuilder->update(User::class, 'u')
-            ->set('u.username', ':newusername')
-            ->where('u.username == :id')
-            ->setParameter('id',$entity->getId())
-            ->setParameter('newusername',$newuser->getUserIdentifier());
-        $query=$queryBuilder->getQuery();
-        $query->execute();
-
-    }
+//    public function updateUsername(User $entity,User $newuser){
+//        $queryBuilder = $this->getEntityManager()->createQueryBuilder();
+//        $queryBuilder->update(User::class, 'u')
+//            ->set('u.username', ':newusername')
+//            ->where('u.username == :id')
+//            ->setParameter('id',$entity->getId())
+//            ->setParameter('newusername',$newuser->getUserIdentifier());
+//        $query=$queryBuilder->getQuery();
+//        $query->execute();
+//
+//    }
 
 //    /**
 //     * @return User[] Returns an array of User objects
