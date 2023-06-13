@@ -13,9 +13,9 @@
         <div class="popup-modal-username">
             {{ form_start(form) }}
                     <div class="">
-                        {{ form_widget(form.PlainPassword, {'attr': {'placeholder': 'Password', 'value': ''}}) }}
-                        {{ form_widget(form.username, {'attr': {'placeholder': 'New username', 'value': ''}}) }}
-                        <button type="submit" id="submit" class=" login-btn">Change</button>
+                        {{ form_widget(form.PlainPassword, {'attr': {'placeholder': 'Password', 'value': ''},'label':false}) }}
+                        {{ form_widget(form.username, {'attr': {'placeholder': 'New username', 'value': ''},'label':false}) }}
+                        <button type="submit" class=" login-btn">Change</button>
                     </div>
             {{ form_end(form) }}
             <button class="btn-primary " id="close-modal-username">Close</button>
@@ -23,22 +23,26 @@
     </div>
     <div class="popup-overlay-email">
         <div class="popup-modal-email">
+            {{ form_start(formemail) }}
             <div>
-                <input type="text" placeholder="Password">
-                <input type="text" placeholder="New email">
+                {{ form_widget(formemail.PlainPassword, {'attr': {'placeholder': 'Password', 'value': ''},'label':false}) }}
+                {{ form_widget(formemail.email, {'attr': {'placeholder': 'New email', 'value': ''},'label':false}) }}
+                <button type="submit" class=" login-btn">Change</button>
             </div>
-            <a type="submit">Change</a>
+            {{ form_end(formemail) }}
             <button class="btn-primary" id="close-modal-email">Close</button>
         </div>
     </div>
     <div class="popup-overlay-password">
         <div class="popup-modal-password">
+            {{ form_start(formpassword) }}
             <div>
-                <input type="text" placeholder="Old password">
-                <input type="text" placeholder="New password">
-                <input type="text" placeholder="Confirm new password">
+                {{ form_widget(formpassword.PlainPassword, {'attr': {'placeholder': 'Old Password', 'value': ''},'label':false}) }}
+                {{ form_widget(formpassword.newpassword.first, {'attr': {'placeholder': 'New Password', 'value': ''},'label':false}) }}
+                {{ form_widget(formpassword.newpassword.second, {'attr': {'placeholder': 'Confirm Password', 'value': ''},'label':false}) }}
+                <button type="submit" class=" login-btn">Change</button>
             </div>
-            <a type="submit">Change</a>
+            {{ form_end(formpassword) }}
             <button class="btn-primary" id="close-modal-password">Close</button>
         </div>
     </div>

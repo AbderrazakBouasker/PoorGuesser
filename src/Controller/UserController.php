@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ModalUser\ModifyEmailType;
+use App\Form\ModalUser\ModifyPasswordType;
 use App\Form\ModalUser\ModifyUsernameType;
 use App\Entity\User;
 use App\Form\UserType;
@@ -58,50 +59,44 @@ class UserController extends AbstractController
     public function edit(Request $request, User $user, UserRepository $userRepository, UserPasswordHasherInterface $userPasswordHasher): Response
     {   $formuser=$this->createForm(ModifyUsernameType::class,null);
         $formemail=$this->createForm(ModifyEmailType::class,null);
-        //$form = $this->createForm(UserType::class, null);
-//        $form->add('currentPassword', PasswordType::class, [
-//            'constraints' => [
-//                new UserPassword(),
-//            ],
-//        ]);
-//        $form->handleRequest($request);
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            if ($userPasswordHasher->isPasswordValid($user,$form->get('PlainPassword')->getData())){
-//                $user->setPassword($userPasswordHasher->hashPassword($user,$form->get('password')->getData()));
-//                $userRepository->save($user, true);
-//                //return new JsonResponse(array("1"=>$user->getPassword(),"2"=>$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"3"=>$user->getPassword()==$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"4"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
-//                //return new JsonResponse(array("plainpass"=>$request->request->get('PlainPassword'),"hashpass"=>$user->getPassword(),"comp"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
-//                return new JsonResponse(array("plain"=>$form->get('PlainPassword')->getData(),"comp"=>$userPasswordHasher->isPasswordValid($user,$form->get('PlainPassword')->getData())));
-////                return new JsonResponse(array("pass"=>$request->request->get('plainPassword'),"username"=>$request->request->get('username')));
-//            }
-            $formuser->handleRequest($request);
+        $formpassword=$this->createForm(ModifyPasswordType::class,null);
+        $formuser->handleRequest($request);
+        $formemail->handleRequest($request);
+        $formpassword->handleRequest($request);
+
+
             if ($formuser->isSubmitted() && $formuser->isValid()) {
                 if ($userPasswordHasher->isPasswordValid($user, $formuser->get('PlainPassword')->getData())) {
-                    //$user->setPassword($userPasswordHasher->hashPassword($user,$formuser->get('password')->getData()));
                     $user->setUsername($formuser->get('username')->getData());
                     $userRepository->save($user, true);
-                    //return new JsonResponse(array("1"=>$user->getPassword(),"2"=>$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"3"=>$user->getPassword()==$userPasswordHasher->hashPassword($user,$request->request->get('PlainPassword')),"4"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
-                    //return new JsonResponse(array("plainpass"=>$request->request->get('PlainPassword'),"hashpass"=>$user->getPassword(),"comp"=>password_verify($request->request->get('PlainPassword'),$user->getPassword())));
-                    //return new JsonResponse(array("plain"=>$formuser->get('PlainPassword')->getData(),"comp"=>$userPasswordHasher->isPasswordValid($user,$formuser->get('PlainPassword')->getData())));
-//                return new JsonResponse(array("pass"=>$request->request->get('plainPassword'),"username"=>$request->request->get('username')));
                 }
-            return $this->redirectToRoute('app_user_show', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_user_show', ['id'=>$user->getId()], Response::HTTP_SEE_OTHER);
         }
 
 
-            $formemail->handleRequest($request);
+
             if($formemail->isSubmitted() && $formemail->isValid()){
-                if ($userPasswordHasher->isPasswordValid($user, $formuser->get('PlainPassword')->getData())){
+                if ($userPasswordHasher->isPasswordValid($user, $formemail->get('PlainPassword')->getData())){
                     $user->setEmail($formemail->get('email')->getData());
                     $userRepository->save($user,true);
                 }
-                return $this->redirectToRoute('app_user_show', [], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('app_user_show', ['id'=>$user->getId()], Response::HTTP_SEE_OTHER);
+            }
+
+
+            if($formpassword->isSubmitted() && $formpassword->isValid()){
+                if ($userPasswordHasher->isPasswordValid($user, $formpassword->get('PlainPassword')->getData())){
+                    $user->setPassword($userPasswordHasher->hashPassword($user,$formpassword->get('newpassword')->getData()));
+                    $userRepository->save($user,true);
+                }
+                return $this->redirectToRoute('app_user_show', ['id'=>$user->getId()], Response::HTTP_SEE_OTHER);
             }
 
         return $this->renderForm('user/edit.html.twig', [
             'user' => $user,
             'form' => $formuser,
             'formemail'=>$formemail,
+            'formpassword'=>$formpassword,
         ]);
     }
 
