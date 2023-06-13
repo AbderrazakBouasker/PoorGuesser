@@ -3,21 +3,21 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
+{#    {{ form_start(form) }}#}
+{#    {{ form_widget(form) }}#}
 {#    <input type="text" name="PlainPassword" placeholder="Password" required>#}
-    <button type="submit" class="btn"></button>
-    {{ form_end(form) }}
+{#    <button type="submit" class="btn"></button>#}
+{#    {{ form_end(form) }}#}
 
     <div class="popup-overlay-username">
         <div class="popup-modal-username">
-                <form>
+            {{ form_start(form) }}
                     <div class="">
-                        <input type="text" name="plainPassword" placeholder="Password">
-                        <input type="text" name="username" placeholder="New username">
+                        {{ form_widget(form.PlainPassword, {'attr': {'placeholder': 'Password', 'value': ''}}) }}
+                        {{ form_widget(form.username, {'attr': {'placeholder': 'New username', 'value': ''}}) }}
                         <button type="submit" id="submit" class=" login-btn">Change</button>
                     </div>
-                </form>
+            {{ form_end(form) }}
             <button class="btn-primary " id="close-modal-username">Close</button>
         </div>
     </div>
