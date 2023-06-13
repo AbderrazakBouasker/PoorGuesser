@@ -1,11 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Game{% endblock %}
+{% block stylesheets %}
+<link href="https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.css" rel="stylesheet"/>
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Game</h1>
+<body>
+    <div id="mly" style="width: 400px; height: 300px;"></div>
+</body>
+{% endblock %}
 
-    {{ include('game/_form.html.twig') }}
+{% block javascripts %}
+<script src="https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var Viewer = window.Mapillary.Viewer;
 
-    <a href="{{ path('app_game_index') }}">back to list</a>
+        var viewer = new Viewer({
+            accessToken: '6211217542287389',
+            container: 'mly', // the ID of our container defined in the HTML body
+            imageId: '1182751338987393',
+        });
+    });
+</script>
 {% endblock %}

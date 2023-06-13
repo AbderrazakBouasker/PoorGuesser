@@ -14,7 +14,7 @@ class GameType extends AbstractType
         $builder
             ->add('final_score')
             ->add('creation_date')
-            ->add('user_id')
+          //  ->add('user_id')
         ;
     }
 
