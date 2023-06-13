@@ -35,15 +35,39 @@
     </div>
     <div class="popup-overlay-password">
         <div class="popup-modal-password">
+            <div id="passfields">
             {{ form_start(formpassword) }}
-            <div>
-                {{ form_widget(formpassword.PlainPassword, {'attr': {'placeholder': 'Old Password', 'value': ''},'label':false}) }}
-                {{ form_widget(formpassword.newpassword.first, {'attr': {'placeholder': 'New Password', 'value': ''},'label':false}) }}
-                {{ form_widget(formpassword.newpassword.second, {'attr': {'placeholder': 'Confirm Password', 'value': ''},'label':false}) }}
-                <button type="submit" class=" login-btn">Change</button>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                {{ form_widget(formpassword.PlainPassword, {
+                    'attr': {
+                    'placeholder': 'Old Password', 'value': '',
+                    'class':'form-control',
+
+                },
+                    'label':false
+                }) }}
+                {{ form_widget(formpassword.newpassword.first, {
+                    'attr': {
+                        'placeholder': 'New Password', 'value': '',
+                        'class':'form-control',
+                    },
+                    'label':false
+                }) }}
+                {{ form_widget(formpassword.newpassword.second, {
+                    'attr': {
+                        'placeholder': 'Confirm Password', 'value': '',
+                        'class':'form-control',
+                    },
+                    'label':false,
+                }) }}
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                    <button type="submit" class="slide-btn login-btn">Change</button>
+                </div>
+
             </div>
             {{ form_end(formpassword) }}
-            <button class="btn-primary" id="close-modal-password">Close</button>
+            </div>
+            <button class="btn-primary" style="position: absolute;top: 0px;right: 0px;" id="close-modal-password">Close</button>
         </div>
     </div>
 

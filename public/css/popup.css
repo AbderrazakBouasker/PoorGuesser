@@ -64,3 +64,7 @@
     left: 0;
     right: 0;
 }
+#passfields{
+    display: flex;
+    justify-items: center;
+}
